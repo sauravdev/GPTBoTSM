@@ -46,7 +46,7 @@ def get_popular_tweets(query):
 
 def generate_summary(text, min_length, max_length):
     # Set the API key and model
-    openai.api_key = "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"
+    openai.api_key = ""
     model_engine = "text-davinci-002"
     prompt=f"Please summarize this text between {min_length} and {max_length} words: {text}",
     # Use the OpenAI API to generate a response
@@ -58,7 +58,7 @@ def generate_summary(text, min_length, max_length):
 
 
 # Test the function
-tweets = get_popular_tweets("data science OR #datascience")
+tweets = get_popular_tweets("data engineering OR #dataengineering")
 
 
 appended_posts = ""
